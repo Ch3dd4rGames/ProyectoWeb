@@ -1,3 +1,60 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.menu-cont
+{
+    padding: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blueviolet;
+}
+
+.menu-cont > a
+{
+    display: block;
+    width: 100%;
+}
+
+nav
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: yellow;
+}
+
+nav .menu-opt
+{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Este checkbox permanecerá oculto siempre, aunque será el que me permita detectar si se tiene que ver u ocultar el menú */
+/* #menuToggle
+{
+    display: none;
+} */
+
+/* Estado en reposo */
+nav ul a
+{
+    display: block;
+    font-weight: bold;
+    color: yellow;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
 /* MEDIA QUERY */
 
 /* TABLET */
