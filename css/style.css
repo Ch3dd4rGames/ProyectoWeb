@@ -6,10 +6,11 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-
 }
 body {
     font-family: "Poppins", sans-serif;
+    background-color: #1a1a1a; /* Gris muy oscuro */
+    color: #e0e0e0; /* Gris claro */
 }
 
 .container {
@@ -17,19 +18,19 @@ body {
     margin: 0 auto;
 }
 
-/* No entiendo porque esta imagen no la carga */
+/* Header */
 .header {
     background-image: linear-gradient(
-        rgba(0,0,0,0.7),
-        rgba(0,0,0,0.7)),
+        rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8)),
         url(../media/images/PurpleDephts.png);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 70vh;           
+    min-height: 70vh;
     display: flex;
     align-items: center;
-
+    position: relative;
 }
 
 .menu{
@@ -40,11 +41,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 10;
 }
 
 .logo{
-    color: #F9FAFC;
-    font-size: 25px;
+    color: #9b4d96; /* Morado */
+    font-size: 30px;
     font-weight: 800;
 }
 
@@ -56,12 +58,12 @@ body {
 .menu .navbar ul li a {
     font-size: 18px;
     padding: 20px;
-    color: #FF5537;
+    color: #ff6347; /* Rojo tomate */
     display: block;
     font-weight: 600;
 }
 .menu .navbar ul li a:hover {
-    color: #FFFFFF;
+    color: #9b4d96; /* Morado */
 }
 
 #menu {
@@ -69,7 +71,6 @@ body {
 }
 .menu-icono {
     width: 25px;
-
 }
 
 .menu label {
@@ -77,21 +78,22 @@ body {
     display: none;
 }
 
-.header-content{
+.header-content {
     text-align: center;
+    z-index: 10;
 }
 
 .header-content h1 {
-    font-size: 75px;
+    font-size: 70px;
     line-height: 80px;
-    color: #FF735A;
+    color: #ff6347; /* Rojo tomate */
     text-transform: uppercase;
     margin-bottom: 35px;
 }
 
 .header-content p {
     font-size: 16px;
-    color: #C5C5C5;
+    color: #d1c6e7; /* Gris suave */
     padding: 0 250px;
     margin-bottom: 25px;
 }
@@ -99,18 +101,20 @@ body {
 .btn-1 {
     display: inline-block;
     padding: 11px 35px;
-    background-color: #FF5537;
+    background-color: #9b4d96; /* Morado */
     color: #F9FAFC;
     text-transform: uppercase;
+    border-radius: 5px;
 }
 
 .btn-1:hover {
-    background-color: #FF735A;
+    background-color: #7e3e7e; /* Morado más oscuro */
 }
 
+/* Sección de personajes */
 .personajes {
     padding: 100px 0;
-    background-color: #fffd6f;
+    background-color: #262626; /* Gris muy oscuro */
     position: relative;
 }
 
@@ -121,7 +125,7 @@ body {
 .personajes-content h2 {
     font-size: 55px;
     line-height: 70px;
-    color: #323337;
+    color: #ff6347; /* Rojo tomate */
     text-transform: uppercase;
     padding: 0;
     margin-bottom: 15px;
@@ -129,7 +133,7 @@ body {
 
 .text-p {
     font-size: 16px;
-    color: #414247;
+    color: #d1c6e7; /* Gris suave */
     padding: 0 250px;
     margin-bottom: 35px;
 }
@@ -146,6 +150,7 @@ body {
 
 .personajes-1 img {
     width: 200px;
+    border-radius: 10px;
 }
 
 .personajes-img {
@@ -155,16 +160,16 @@ body {
 }
 
 .personajes-1 h3 {
-    color: #323337;
+    color: #ff6347; /* Rojo tomate */
     font-size: 20px;
     margin-bottom: 15px;
 }
 
-/* estas imagenes no las carga en general al ejecutarlo */
+/* Sección de redes sociales */
 .rrss {
     background-image: linear-gradient(
-        rgba(0,0,0,0.7),
-        rgba(0,0,0,0.7)),
+        rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8)),
         url(../imagenes/background.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -180,14 +185,14 @@ body {
 .rrss-content h2 {
     font-size: 55px;
     line-height: 70px;
-    color: #C5C5C5;
+    color: #9b4d96; /* Morado */
     text-transform: uppercase;
     margin-bottom: 50px;
 }
 
 .rrss-content p {
     font-size: 16px;
-    color: #C5C5C5;
+    color: #d1c6e7; /* Gris suave */
     margin-bottom: 50px;
     padding: 0 100px;
 }
@@ -208,10 +213,58 @@ body {
 }
 
 .rrss-1 h3 {
-    color: #EACCB3;
+    color: #ff6347; /* Rojo tomate */
     font-size: 18px;
 }
 
+/* Formulario */
+form {
+    background-color: #333333; /* Gris oscuro */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    margin-top: 30px;
+}
+
+form h2 {
+    color: #9b4d96; /* Morado */
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid #666;
+    background-color: #444; /* Gris oscuro */
+    color: #fff;
+    font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
+    border-color: #ff6347; /* Rojo tomate */
+    background-color: #555;
+}
+
+button {
+    background-color: #ff6347; /* Rojo tomate */
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9b4d96; /* Morado */
+}
+
+/* Sección de información */
 .info {
     display: flex;
 }
@@ -219,19 +272,11 @@ body {
 .info-1 {
     width: 50%;
     padding: 100px 250px 100px 100px;
-    background-color: #d974f8;
+    background-color: #fdff6a; /* Amarillo vibrante */
 }
 
-.info-2 {
+.info-2, .info-3 {
     background-image: url(../media/images/estethic.webp);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50%;
-}
-
-.info-3 {
-    background-image: url(../media/images/camaras.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -241,14 +286,14 @@ body {
 h2 {
     font-size: 55px;
     line-height: 70px;
-    color: #323337;
+    color: #9b4d96; /* Morado */
     text-transform: uppercase;
     margin-bottom: 20px;
 }
 
 p {
     font-size: 16px;
-    color: #414247;
+    color: #d1c6e7; /* Gris suave */
     margin: 25px 0 45px 0;
 }
 
@@ -274,13 +319,12 @@ p {
 
 .boss-1 h3 {
     font-size: 25px;
-    color: #323337;
+    color: #ff6347; /* Rojo tomate */
 }
 
 .footer {
     padding: 100px 0;
-    background-color: #000000;
-
+    background-color: #1a1a1a; /* Gris oscuro */
 }
 
 .footer-content {
@@ -290,19 +334,18 @@ p {
 
 .link h3 {
     font-size: 18px;
-    color: #FFCDD2;
+    color: #FFCDD2; /* Rosa pálido */
     margin-bottom: 15px;
 }
 
 .link a {
     font-size: 16px;
-    color: #C5C5C5;
+    color: #cccccc; /* Gris claro */
     display: block;
     margin-bottom: 15px;
 }
 
 @media(max-width:991px) {
-
     .menu {
         padding: 30px;
     }
@@ -413,17 +456,17 @@ p {
         text-align: center;
     }
 
-    @media(max-width:991px) {
-        .boss-content {
-          flex-direction: column;
-        }
-        .boss-1 {
-          padding: 15px;
-          text-align: center;
-        }
-        .boss-1 img {
-          width: 100%;
-          margin-bottom: 15px;
-        }
-      }
+    .boss-content {
+        flex-direction: column;
+    }
+
+    .boss-1 {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .boss-1 img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
 }
