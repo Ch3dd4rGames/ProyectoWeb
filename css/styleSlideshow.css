@@ -1,5 +1,6 @@
 /* La regla especial @font-face me permite cargar una tipografía desde un archivo local y asignarle un nombre mediante la propiedad font-family */
-@font-face {
+@font-face 
+{
   /* El nombre que le damos a la tipografía que cargamos */
   font-family: "FNAF";
   src: url(../fonts/SHOWG.ttf);
@@ -19,6 +20,7 @@ body
     background-image: url(../media/images/Galaxy.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    margin-bottom: 2%;
 }
 
 .menu-cont
