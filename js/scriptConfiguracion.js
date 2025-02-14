@@ -18,3 +18,4 @@ volumeSlider.addEventListener("input", function()
 {
     video.volume = this.value;
 });
+

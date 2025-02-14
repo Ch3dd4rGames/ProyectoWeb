@@ -21,6 +21,7 @@ body
     background-repeat: no-repeat;
     background-size: 100% 100%;
     text-align: center;
+    height: 100%;
 }
 
 .menu-cont
@@ -66,30 +67,75 @@ h1
     padding: 1em;
 }
 
-.video-cont
+.game-container 
 {
-    display: block;
-    align-content: center;
-    width: 100%;
-    height: 25rem;
-}
-
-video 
-{
-    max-width: 60%;
-    height: auto;
-}
-
-.controls 
-{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: url("../media/images/BackBattle.png") no-repeat center center/cover;
+    margin: auto;
     margin-top: 3em;
-    margin-bottom: 1.5em;
+    margin-bottom: 5.5em;
+    overflow: hidden;
 }
 
-label, input 
+.character 
 {
-    font-size: 18px;
-    display: block;
-    margin: 10px auto;
+    position: absolute;
+    width: 20em;
+    transition: opacity 0.3s, transform 0.5s;
+}
+
+.flipped 
+{
+    width: 15em;
+    transform: scaleX(-1);
+}
+
+.health-bar 
+{
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    accent-color: red;
+}
+
+.health-text 
+{
+    position: absolute;
     color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+}
+
+.boss-health 
+{
+    width: 300px;
+    height: 15px;
+    bottom: 20px;
+    left: 75px;
+}
+
+.boss-health-text 
+{
+    bottom: 40px;
+    left: 210px;
+    font-size: 24px;
+}
+
+.switch-button 
+{
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+    padding: 10px;
+    background: blue;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.switch-button:hover
+{
+    opacity: 75%;
 }
