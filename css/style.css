@@ -33,7 +33,7 @@ body {
     position: relative;
 }
 
-.menu{
+.menu {
     position: absolute;
     top: 0;
     left: 0;
@@ -44,7 +44,7 @@ body {
     z-index: 10;
 }
 
-.logo{
+.logo {
     color: #9b4d96; /* Morado */
     font-size: 30px;
     font-weight: 800;
@@ -62,6 +62,7 @@ body {
     display: block;
     font-weight: 600;
 }
+
 .menu .navbar ul li a:hover {
     color: #9b4d96; /* Morado */
 }
@@ -69,6 +70,7 @@ body {
 #menu {
     display: none;
 }
+
 .menu-icono {
     width: 25px;
 }
@@ -76,6 +78,52 @@ body {
 .menu label {
     cursor: pointer;
     display: none;
+}
+
+@media(max-width: 991px) {
+    .menu {
+        padding: 30px;
+    }
+
+    /* Muestra el icono del menú en pantallas pequeñas */
+    .menu label {
+        display: initial;
+    }
+
+    /* Oculta el menú por defecto en pantallas pequeñas */
+    .menu .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        width: 100%;
+    }
+
+    /* Muestra el menú cuando el checkbox está marcado */
+    #menu:checked ~ .navbar {
+        display: block;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Estilo del menú cuando está activo */
+    .menu .navbar ul li a {
+        font-size: 18px;
+        padding: 20px;
+        color: #ff6347; /* Rojo tomate */
+        display: block;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .menu .navbar ul li a:hover {
+        color: #9b4d96; /* Morado */
+    }
 }
 
 .header-content {

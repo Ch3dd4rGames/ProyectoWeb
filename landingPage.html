@@ -16,7 +16,7 @@
         <a href="#" class="logo" >Five Nights at Freddy's</a>
         <input type="checkbox" id="menu"/>
         <label for="menu">
-            <img src="media/images/MenuButton.png" class="menu-icono" alt="">
+            <img src="media/images/Button.webp" class="menu-icono" alt="">
         </label>
         <nav class="navbar">
             <ul>
@@ -28,6 +28,20 @@
         </nav>
 
     </div>
+    <div class="menu">
+        <div class="logo">Mi Logo</div>
+        <input type="checkbox" id="menu">
+        <label for="menu" class="menu-icono">&#9776;</label> <!-- Icono de menú -->
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+    
     
 
     <div class="header-content container">
@@ -173,8 +187,57 @@
 
   </section>
 
+  <section class="trailer container" style="text-align: center;">
+    <h2>Tráiler</h2>
+    <p>Disfruta del tráiler de Five Nights at Freddy's.</p>
+    <div class="trailer-content" style="display: flex; justify-content: center;">
+        <iframe width="560" height="315" src="media/images/FNAF-Video.webm" 
+                title="Tráiler de Five Nights at Freddy's" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+    </div>
+    <a href="https://store.steampowered.com/app/319510/Five_Nights_at_Freddys/?l=spanish" target="_blank" 
+       style="display: inline-block; margin-top: 15px; text-decoration: none; background: #ffcc00; padding: 10px 20px; border-radius: 5px; color: black; font-weight: bold;">
+        Pulse aquí para acceder al juego
+    </a>
+</section>
 
-  <footer class="footer">
+
+  <section class="contact-form container">
+    <h2>Contacto</h2>
+    <form id="contactForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit" class="btn-1">Enviar</button>
+    </form>
+    <p id="successMessage" style="display: none; color: green; margin-top: 10px;">
+        ¡Mensaje enviado correctamente!
+    </p>
+</section>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        document.getElementById("successMessage").style.display = "block"; // Muestra el mensaje
+        this.reset(); // Limpia el formulario
+        
+        // Después de 2 segundos, oculta el mensaje
+        setTimeout(function() {
+            document.getElementById("successMessage").style.display = "none";
+        }, 2000); // 2000 ms = 2 segundos
+    });
+</script>
+
+
+<footer class="footer">
     <div class="footer-content container">
         <div class="link">
             <h3>Participantes</h3>
@@ -220,53 +283,6 @@
     </div>
 
   </footer>
-  <section class="contact-form container">
-    <h2>Contacto</h2>
-    <form id="contactForm">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="message">Mensaje:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-        
-        <button type="submit" class="btn-1">Enviar</button>
-    </form>
-    <p id="successMessage" style="display: none; color: green; margin-top: 10px;">
-        ¡Mensaje enviado correctamente!
-    </p>
-</section>
-
-<script>
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-        event.preventDefault(); 
-        document.getElementById("successMessage").style.display = "block"; // Muestra el mensaje
-        this.reset(); // Limpia el formulario
-        
-        // Después de 2 segundos, oculta el mensaje
-        setTimeout(function() {
-            document.getElementById("successMessage").style.display = "none";
-        }, 2000); // 2000 ms = 2 segundos
-    });
-</script>
-
-<section class="trailer container" style="text-align: center;">
-    <h2>Tráiler</h2>
-    <p>Disfruta del tráiler de Five Nights at Freddy's.</p>
-    <div class="trailer-content" style="display: flex; justify-content: center;">
-        <iframe width="560" height="315" src="media/images/FNAF-Video.webm" 
-                title="Tráiler de Five Nights at Freddy's" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-        </iframe>
-    </div>
-    <a href="https://store.steampowered.com/app/319510/Five_Nights_at_Freddys/?l=spanish" target="_blank" 
-       style="display: inline-block; margin-top: 15px; text-decoration: none; background: #ffcc00; padding: 10px 20px; border-radius: 5px; color: black; font-weight: bold;">
-        Pulse aquí para acceder al juego
-    </a>
-</section>
     
 </body>
 </html>
