@@ -9,7 +9,7 @@
 }
 body {
     font-family: "Poppins", sans-serif;
-    background-color: #1a1a1a; /* Gris muy oscuro */
+    background-color: #363434; /* Gris muy oscuro */
     color: #e0e0e0; /* Gris claro */
 }
 
@@ -21,7 +21,7 @@ body {
 /* Header */
 .header {
     background-image: linear-gradient(
-        rgba(0,0,0,0.8),
+        rgba(61, 57, 57, 0.8),
         rgba(0,0,0,0.8)),
         url(../media/images/PurpleDephts.png);
     background-position: center bottom;
@@ -33,7 +33,7 @@ body {
     position: relative;
 }
 
-.menu {
+.menu{
     position: absolute;
     top: 0;
     left: 0;
@@ -44,7 +44,7 @@ body {
     z-index: 10;
 }
 
-.logo {
+.logo{
     color: #9b4d96; /* Morado */
     font-size: 30px;
     font-weight: 800;
@@ -62,7 +62,6 @@ body {
     display: block;
     font-weight: 600;
 }
-
 .menu .navbar ul li a:hover {
     color: #9b4d96; /* Morado */
 }
@@ -70,7 +69,6 @@ body {
 #menu {
     display: none;
 }
-
 .menu-icono {
     width: 25px;
 }
@@ -78,52 +76,6 @@ body {
 .menu label {
     cursor: pointer;
     display: none;
-}
-
-@media(max-width: 991px) {
-    .menu {
-        padding: 30px;
-    }
-
-    /* Muestra el icono del menú en pantallas pequeñas */
-    .menu label {
-        display: initial;
-    }
-
-    /* Oculta el menú por defecto en pantallas pequeñas */
-    .menu .navbar {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: #323337;
-        width: 100%;
-    }
-
-    /* Muestra el menú cuando el checkbox está marcado */
-    #menu:checked ~ .navbar {
-        display: block;
-    }
-
-    .menu .navbar ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    /* Estilo del menú cuando está activo */
-    .menu .navbar ul li a {
-        font-size: 18px;
-        padding: 20px;
-        color: #ff6347; /* Rojo tomate */
-        display: block;
-        font-weight: 600;
-        text-align: center;
-    }
-
-    .menu .navbar ul li a:hover {
-        color: #9b4d96; /* Morado */
-    }
 }
 
 .header-content {
@@ -426,6 +378,21 @@ p {
         display: initial;
     }
 
+   /* Estilo para el checkbox para que no sea visible */
+#menu {
+    display: none;
+}
+
+/* Cuando el checkbox está marcado, mostramos el menú */
+#menu:checked + label + .navbar {
+    display: block;
+}
+
+/* Estilo del menú por defecto (cuando no se muestra) */
+.navbar {
+    display: none;
+}
+
     .header {
         min-height: 0vh;
     }
@@ -524,57 +491,171 @@ p {
         width: 100%;
         margin-bottom: 15px;
     }
-    .trailer {
-        text-align: center;
-        padding: 40px 20px;
-        background-color: #111;
-        color: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(255, 204, 0, 0.3);
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
     
-    .trailer h2 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-        color: #ffcc00;
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+        background-color: #000;
     }
     
-    .trailer p {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-    }
-    
-    .trailer-content {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-    
-    .trailer-content iframe {
+    .container {
         width: 80%;
-        max-width: 700px;
-        border: 3px solid #ffcc00;
-        border-radius: 10px;
+        margin: 0 auto;
     }
     
-    .trailer a {
-        display: inline-block;
-        margin-top: 15px;
-        text-decoration: none;
-        background: #ffcc00;
-        padding: 12px 25px;
-        border-radius: 5px;
-        color: black;
+    header {
+        position: relative;
+        background: url(../media/images/background.png) no-repeat center center/cover;
+        height: 100vh;
+        color: white;
+        padding-top: 50px;
+    }
+    
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        font-size: 24px;
         font-weight: bold;
-        font-size: 1.2rem;
-        transition: background 0.3s, transform 0.2s;
+        color: #fff;
+        text-decoration: none;
     }
     
-    .trailer a:hover {
-        background: #2c254e;
-        transform: scale(1.05);
+    .navbar ul {
+        list-style-type: none;
+    }
+    
+    .navbar ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+    
+    .navbar ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    
+    #menu {
+        display: none;
+    }
+    
+    #menu:checked + label + .navbar {
+        display: block;
+    }
+    
+    label {
+        cursor: pointer;
+    }
+    
+    .menu-icono {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .header-content {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    .header-content h1 {
+        font-size: 50px;
+    }
+    
+    header p {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    
+    .btn-1 {
+        padding: 10px 20px;
+        background-color: #f7941d;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    
+    .personajes {
+        background-color: #000000;
+        padding: 50px 0;
+    }
+    
+    .personajes-img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .personajes-group {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .personajes-1 {
+        width: 30%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .personajes-1 img {
+        width: 100%;
+        height: auto;
+    }
+    
+    footer {
+        background-color: #000000;
+        padding: 30px 0;
+        color: #fff;
+    }
+    
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .link {
+        width: 20%;
+    }
+    
+    .link h3 {
+        margin-bottom: 10px;
+    }
+    
+    .link ul {
+        list-style-type: none;
+    }
+    
+    .link ul li {
+        margin-bottom: 10px;
+    }
+    
+    .link ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .rrss-group {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .rrss-1 {
+        width: 30%;
+        text-align: center;
+    }
+    
+    .rrss-1 img {
+        width: 100%;
+        height: auto;
     }
 }
-
-
