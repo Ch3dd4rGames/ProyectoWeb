@@ -22,7 +22,7 @@ body {
     background-image: linear-gradient(
         rgba(0,0,0,0.7),
         rgba(0,0,0,0.7)),
-        url(../imagenes/PurpleDephts);
+        url(../media/images/PurpleDephts.png);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -110,7 +110,7 @@ body {
 
 .personajes {
     padding: 100px 0;
-    background-color: #C5C5C5;
+    background-color: #fffd6f;
     position: relative;
 }
 
@@ -219,11 +219,11 @@ body {
 .info-1 {
     width: 50%;
     padding: 100px 250px 100px 100px;
-    background-color: #E1E2E6;
+    background-color: #d974f8;
 }
 
 .info-2 {
-    background-image: url(../imagenes/paletaroja.png);
+    background-image: url(../media/images/estethic.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -231,7 +231,7 @@ body {
 }
 
 .info-3 {
-    background-image: url(../imagenes/mecanicass.png);
+    background-image: url(../media/images/camaras.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
