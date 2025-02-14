@@ -272,7 +272,7 @@ button:hover {
 .info-1 {
     width: 50%;
     padding: 100px 250px 100px 100px;
-    background-color: #fdff6a; /* Amarillo vibrante */
+    background-color: #ffbe46; /* Amarillo vibrante */
 }
 
 .info-2, .info-3 {
@@ -283,7 +283,7 @@ button:hover {
     width: 50%;
 }
 .info-3 {
-    background-image: url(../media/images/Cameras.jpg);
+    background-image: url(../media/images/Camera.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -331,7 +331,7 @@ p {
 
 .footer {
     padding: 100px 0;
-    background-color: #1a1a1a; /* Gris oscuro */
+    background-color: #000000; /* Gris oscuro */
 }
 
 .footer-content {
