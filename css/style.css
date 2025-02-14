@@ -276,7 +276,14 @@ button:hover {
 }
 
 .info-2, .info-3 {
-    background-image: url(../media/images/estethic.webp);
+    background-image: url(../media/images/Aestethic.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+.info-3 {
+    background-image: url(../media/images/Cameras.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -470,3 +477,5 @@ p {
         margin-bottom: 15px;
     }
 }
+
+
